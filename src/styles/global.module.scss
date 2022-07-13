@@ -1,0 +1,30 @@
+@use './constants/colors';
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: colors.$theme1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: colors.$gray-strong-dark;
+  text-decoration: none;
+}

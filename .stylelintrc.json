@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order",
+    "stylelint-config-prettier-scss"
+  ],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "font-family-no-duplicate-names": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "function-no-unknown": true,
+    "property-no-unknown": true,
+    "declaration-block-no-duplicate-custom-properties": true,
+    "block-no-empty": true,
+    "color-function-notation": "legacy",
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "function-url-quotes": "always",
+    "scss/dollar-variable-empty-line-before": null
+  }
+}

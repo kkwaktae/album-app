@@ -1,0 +1,27 @@
+@use 'styles/constants/colors.scss';
+
+.app {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: 0 auto;
+  background-color: colors.$theme4;
+
+  header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+  }
+
+  main {
+    width: 100%;
+    padding: 80px 20px 100px;
+  }
+
+  footer {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+  }
+}
