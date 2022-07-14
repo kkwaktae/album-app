@@ -1,0 +1,139 @@
+@use 'styles/constants/colors';
+
+main {
+  width: 100%;
+  height: 540px;
+  padding: 20px;
+
+  .featureSection {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+
+    .featureBox {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 100%;
+
+      .iconButton {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: colors.$transparent;
+        border: none;
+        outline: none;
+      }
+
+      .searchItem {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .searchbar {
+          width: 230px;
+          height: 30px;
+          padding-left: 10px;
+          margin-right: 10px;
+          visibility: hidden;
+          border: none;
+          border-bottom: 1px solid;
+          outline: none;
+          opacity: 0;
+          transition: all 0.6s ease;
+        }
+
+        .searchIcon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .addItem {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .addIcon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.imageSection {
+  width: 100%;
+  height: 440px;
+  overflow-y: auto;
+
+  .imageBox {
+    width: 100%;
+    height: 100%;
+
+    .mainImageWrapper {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+
+      img {
+        width: 100%;
+        vertical-align: bottom;
+        border: none;
+        border-radius: 12px;
+      }
+    }
+
+    .subImageWrapper {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 40px;
+
+      .subImageBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+
+        .subImageItem {
+          width: 100%;
+
+          + .subImageItem {
+            margin-left: 2px;
+          }
+
+          img {
+            width: 100%;
+            vertical-align: bottom;
+            border: none;
+            border-radius: 12px;
+          }
+        }
+      }
+    }
+
+    .pagerWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 30px;
+
+      button {
+        width: 24px;
+        height: 24px;
+        color: colors.$gray-light;
+        cursor: pointer;
+        background-color: colors.$theme8;
+        border: none;
+        border-radius: 8px;
+
+        + button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
