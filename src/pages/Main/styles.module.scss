@@ -96,9 +96,11 @@ main {
         align-items: center;
         justify-content: space-evenly;
         width: 100%;
+        height: inherit;
 
         .subImageItem {
           width: 100%;
+          height: inherit;
 
           + .subImageItem {
             margin-left: 2px;
@@ -109,6 +111,11 @@ main {
             vertical-align: bottom;
             border: none;
             border-radius: 12px;
+            transition: all 0.2s ease;
+
+            &:hover {
+              transform: scale(0.9);
+            }
           }
         }
       }
@@ -121,16 +128,28 @@ main {
       width: 100%;
       height: 30px;
 
-      button {
-        width: 24px;
-        height: 24px;
-        color: colors.$gray-light;
-        cursor: pointer;
-        background-color: colors.$theme8;
-        border: none;
-        border-radius: 8px;
+      .pagerBox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: inherit;
 
-        + button {
+        .pager {
+          height: inherit;
+
+          button {
+            width: 48px;
+            height: 24px;
+            font-size: 11px;
+            color: colors.$gray-light;
+            letter-spacing: 0.05em;
+            background-color: colors.$theme8;
+            border-radius: 8px;
+          }
+        }
+
+        .pager:not(:first-child) {
           margin-left: 5px;
         }
       }
