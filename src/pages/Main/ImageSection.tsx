@@ -1,6 +1,21 @@
+import { useEffect, useState } from 'react';
+
+import { fetchImageData } from 'service/image';
 import styles from './styles.module.scss';
 
 function ImageSection() {
+  const [imageDataList, setImageDataList] = useState<CustomFormatImageInfo[]>(
+    []
+  );
+
+  useEffect(() => {
+    (async () => {
+      const data = await fetchImageData();
+      setImageDataList(data);
+    })();
+  }, []);
+  console.log(imageDataList);
+
   return (
     <section className={styles.imageSection}>
       <ul className={styles.imageBox}>
