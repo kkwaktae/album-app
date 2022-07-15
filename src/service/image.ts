@@ -17,7 +17,7 @@ const customizeData = (prevData: ImageInfo[]) => {
   const copyData = [...prevData];
   const SIZE = 5;
   const splitArray = [];
-  const newData: CustomFormatImageInfo[] = [];
+  const newDataList: CustomFormatImageInfo[] = [];
 
   while (copyData.length > 0) {
     const splicedArray = copyData.splice(0, SIZE);
@@ -33,13 +33,13 @@ const customizeData = (prevData: ImageInfo[]) => {
     );
   }
 
-  splitArray.map((dataItem, idx) => {
+  splitArray.reverse().map((dataItem, idx) => {
     const dataObj = {
       data: dataItem,
       page: idx + 1,
     };
-    return newData.push(dataObj);
+    return newDataList.push(dataObj);
   });
 
-  return newData;
+  return newDataList;
 };
