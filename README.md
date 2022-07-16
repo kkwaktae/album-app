@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Album app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 이미지 검색이 가능한 앨범 앱입니다.
 
-## Available Scripts
+## 개발자
 
-In the project directory, you can run:
+곽태훈
 
-### `npm start`
+## 개발 기간
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2022.07.14 ~ 2022.07.16
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 최초 화면
 
-### `npm test`
+- 최근에 업로드 된 순서대로 한 페이지당 5개의 이미지를 불러옵니다.
+- 5개의 작은 썸네일 이미지가 보여지고, 해당 썸네일 이미지 클릭 시 메인 이미지에 타이틀과 함께 보여집니다.
+- 최초에는 가장 최근에 업로드 된 이미지가 메인 이미지에 보여집니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기능
 
-### `npm run build`
+### 검색 기능
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 돋보기 아이콘 클릭 시 검색바가 등장합니다.
+- 검색바에 영어로 된 키워드를 검색하면 해당 키워드를 포함하고 있는 title을 가진 이미지를 필터링합니다.
+- 필터링 된 데이터를 정렬합니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 페이지 이동 기능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 페이지 이동 버튼을 클릭할 때마다 +- 5개의 이미지를 차례대로 보여줍니다.
+- 검색으로 인해 이미지가 필터링 된 후에도 적용 가능됩니다.
 
-### `npm run eject`
+#### 데이터 객체 타입
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```ts
+interface CustomFormatImageInfo {
+  data: ImageInfo[];
+  page: number;
+}
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+interface ImageInfo {
+  userId: number;
+  id: number;
+  title: string;
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 아쉬웠던 점
 
-## Learn More
+개발환경을 구성하고 데이터를 요구에 맞게 활용하기 위해 가공하는 과정, 검색어 필터링 기능을 구현하면서 부족한 디테일을 채우려다보니 너무 많은 시간을 투자했던 것 같습니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+또, 디테일에 집착하려는 편이다 보니 디자인을 벤치마킹하고 레이아웃을 구성하는 데에도 적지 않은 시간을 소모했던 것 같습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+시간 관리의 필요성을 다시 한번 깨닫는 좋은 경험이었습니다.

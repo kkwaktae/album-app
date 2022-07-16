@@ -18,9 +18,14 @@
     "import/no-extraneous-dependencies": "off",
     "no-shadow": "off",
     "react/prop-types": "off",
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "react/react-in-jsx-scope": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-plusplus": "off",
+    "no-return-assign": "off"
   }
 }
