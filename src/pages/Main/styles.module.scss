@@ -17,16 +17,8 @@ main {
       width: 100%;
       height: 100%;
 
-      .iconButton {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        background-color: colors.$transparent;
-        border: none;
-        outline: none;
-      }
-
       .searchItem {
+        position: relative;
         display: flex;
         align-items: center;
         height: 100%;
@@ -44,9 +36,22 @@ main {
           transition: all 0.6s ease;
         }
 
-        .searchIcon {
-          width: 20px;
-          height: 20px;
+        .iconButton {
+          width: 30px;
+          height: 30px;
+          background-color: colors.$transparent;
+
+          .searchIcon,
+          .resetIcon {
+            width: 15px;
+          }
+        }
+
+        .resetButton {
+          position: absolute;
+          right: 35px;
+          visibility: hidden;
+          opacity: 0;
         }
       }
 
@@ -55,9 +60,15 @@ main {
         align-items: center;
         height: 100%;
 
-        .addIcon {
+        .iconButton {
           width: 30px;
           height: 30px;
+          background-color: colors.$transparent;
+
+          .addIcon {
+            width: 20px;
+            height: 30px;
+          }
         }
       }
     }
@@ -74,6 +85,7 @@ main {
     height: 100%;
 
     .mainImageWrapper {
+      position: relative;
       width: 100%;
       height: 300px;
       margin-bottom: 10px;
@@ -84,6 +96,18 @@ main {
         border: none;
         border-radius: 12px;
       }
+
+      .imageTitle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        padding: 20px;
+        color: colors.$white;
+        background-color: colors.$shadow-30;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
     }
 
     .subImageWrapper {
@@ -92,18 +116,16 @@ main {
       margin-bottom: 40px;
 
       .subImageBox {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
         width: 100%;
         height: inherit;
 
         .subImageItem {
-          width: 100%;
+          display: inline-block;
+          width: 58px;
           height: inherit;
 
           + .subImageItem {
-            margin-left: 2px;
+            margin-left: 2.5px;
           }
 
           img {
